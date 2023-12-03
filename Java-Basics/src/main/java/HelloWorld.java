@@ -12,9 +12,15 @@ public class HelloWorld {
 //        System.out.println(Integer.toBinaryString(-x));
 //        System.out.println(Integer.toBinaryString((x) / 2 ));
 //        System.out.println(Integer.toBinaryString((x) >> 1));
-        String x = "A";
-        String y = "B";
-        System.out.println(x+y == "AB");
+        int x = 40;
+        if (false){
+            System.out.println();
+        }
+        lable:
+        for (int i= 0 ;i<10;i++){
+            for (int xx = 0 ;i<10;i++){
+                break lable;
+            }
         }
     }
-
+}
