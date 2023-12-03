@@ -5,11 +5,11 @@ public class HelloWorld {
         System.out.println("initialization is here ");
     }
     public static void main(String[] args) {
-        boolean x = false;
-        if (x){
-            System.out.println("TRUE");
-        }else {
-            System.out.println("FALSE");
+        int x = 6;
+        switch(x){
+            case 5:
+                System.out.println("5");
+                break;
         }
     }
 }
