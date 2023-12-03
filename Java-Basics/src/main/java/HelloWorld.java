@@ -14,7 +14,7 @@ public class HelloWorld {
 //        System.out.println(Integer.toBinaryString((x) >> 1));
         String x = "A";
         String y = "B";
-        System.out.println("AB" == x+y);
+        System.out.println(x+y == "AB");
         }
     }
 
