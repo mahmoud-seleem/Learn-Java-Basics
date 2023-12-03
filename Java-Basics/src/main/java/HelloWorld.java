@@ -12,10 +12,9 @@ public class HelloWorld {
 //        System.out.println(Integer.toBinaryString(-x));
 //        System.out.println(Integer.toBinaryString((x) / 2 ));
 //        System.out.println(Integer.toBinaryString((x) >> 1));
-        long x = Integer.MAX_VALUE + 10000L;
-        System.out.println(Long.toBinaryString(x));
-        System.out.println((float)x);
-        System.out.println(Integer.MAX_VALUE);
+        String x = "A";
+        String y = "B";
+        System.out.println("AB" == x+y);
         }
     }
 
