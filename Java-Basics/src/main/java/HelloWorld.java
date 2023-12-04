@@ -1,12 +1,13 @@
+import OOP.Account;
+
 import java.util.Scanner;
 public class HelloWorld {
-    public static Scanner s = new Scanner(System.in);
     static {
-        System.out.println("initialization is here ");
+        System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        int x[][] = new int[4][5];
-        m(1,2);
+        Account a = new Account();
+        System.out.println(a.getName());
     }
     public static void m(double y,double... x){
         System.out.println(x.length);
