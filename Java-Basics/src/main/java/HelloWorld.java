@@ -5,22 +5,15 @@ public class HelloWorld {
         System.out.println("initialization is here ");
     }
     public static void main(String[] args) {
-//        int x = Integer.MIN_VALUE +1000;
-//        System.out.println(Integer.toBinaryString(x));
-//        System.out.println(Integer.toBinaryString(~x));
-//        System.out.println(Integer.toBinaryString((~x) + 1 ));
-//        System.out.println(Integer.toBinaryString(-x));
-//        System.out.println(Integer.toBinaryString((x) / 2 ));
-//        System.out.println(Integer.toBinaryString((x) >> 1));
-        int x = 40;
-        if (false){
-            System.out.println();
-        }
-        lable:
-        for (int i= 0 ;i<10;i++){
-            for (int xx = 0 ;i<10;i++){
-                break lable;
-            }
-        }
+        int x[][] = new int[4][5];
+        m(1,2);
     }
+    public static void m(double y,double... x){
+        System.out.println(x.length);
+    }
+    public static void m(double... x){
+        System.out.println(x.length);
+    }
+
+
 }
