@@ -6,15 +6,16 @@ import java.util.Random;
 public class Account {
 
     public Account(){
-        System.out.println("hi");
+
         try{
+            System.out.println("hi");
             throw new Exception("exception");
         }catch (Exception e ){
             System.out.println(e.getMessage());
         }
     }
     public String name;
-    public static final int X =5;
+    public static  int X =5;
     static {
         System.out.println("initialization of Account");
     }
@@ -24,4 +25,10 @@ public class Account {
     public String getName(){
         return this.name;
     }
+    public static void sss(){
+
+    }
+}
+class Test{
+    private int s;
 }

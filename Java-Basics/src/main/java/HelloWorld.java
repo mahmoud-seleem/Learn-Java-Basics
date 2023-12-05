@@ -7,7 +7,7 @@ public class HelloWorld {
     }
     public static void main(String[] args) {
         Account a = new Account();
-        System.out.println(a.getName());
+        a.sss();
     }
     public static void m(double y,double... x){
         System.out.println(x.length);
