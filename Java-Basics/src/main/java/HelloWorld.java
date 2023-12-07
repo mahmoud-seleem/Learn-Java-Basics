@@ -8,10 +8,8 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        Person p = new Person();
-        System.out.println(p.x);
-        Human h = new Person();
-        System.out.println(h.x);
+        Human p = new Person();
+        p.play();
     }
     public static void m(double y,double... x){
         System.out.println(x.length);
