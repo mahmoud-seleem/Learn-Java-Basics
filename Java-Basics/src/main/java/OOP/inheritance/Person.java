@@ -7,6 +7,7 @@ public class Person extends Human{
     }
     public static void print(){
         //m();
-        stat = 20;
+
     }
+
 }
