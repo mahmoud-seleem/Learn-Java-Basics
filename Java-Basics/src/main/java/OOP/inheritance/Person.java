@@ -1,6 +1,9 @@
 package OOP.inheritance;
 
-public class Person extends Human{
+import java.io.Closeable;
+import java.io.IOException;
+
+public class Person extends Human implements Closeable {
     public int x = 5;
     static {
         System.out.println("init of person");
@@ -10,4 +13,8 @@ public class Person extends Human{
 
     }
 
+    @Override
+    public void close()  {
+
+    }
 }

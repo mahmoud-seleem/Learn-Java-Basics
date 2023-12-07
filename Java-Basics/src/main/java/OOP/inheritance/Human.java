@@ -1,6 +1,8 @@
 package OOP.inheritance;
 
-public class Human {
+import OOP.polymorphism.Playable;
+
+public class Human implements Playable {
 
     static {
         System.out.println("init of Human");
@@ -23,6 +25,10 @@ public class Human {
         this.name = name;
     }
     private void pri(){
+
+    }
+     @Override
+     public void play(){
 
     }
 }
