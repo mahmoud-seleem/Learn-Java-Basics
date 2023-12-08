@@ -15,7 +15,7 @@ public class Account {
         }
     }
     public String name;
-    public static  int X =5;
+    private static  int X =5;
     static {
         System.out.println("initialization of Account");
     }
@@ -28,7 +28,20 @@ public class Account {
     public static void sss(){
 
     }
-}
-class Test{
-    private int s;
+    static void usingStatic(){
+        StaticInnerClass s = new StaticInnerClass();
+        s.m();
+        s.pr();
+    }
+
+    public static class StaticInnerClass {
+        int s ;
+        public void m(){
+            System.out.println(X);
+            sss();
+        }
+        private  void pr(){
+
+        }
+    }
 }
