@@ -14,10 +14,11 @@ public class Human implements Playable {
     }
     public int x = 10;
     public Human(){
-        this.name = "no-name";
+        System.out.println(getName());
+        this.name = "mahmoud";
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
