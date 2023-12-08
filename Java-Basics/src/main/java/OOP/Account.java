@@ -36,6 +36,9 @@ public class Account {
 
     public static class StaticInnerClass {
         int s ;
+        static {
+            System.out.println("initialization of static inner class");
+        }
         public void m(){
             System.out.println(X);
             sss();
