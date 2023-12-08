@@ -1,4 +1,5 @@
 import OOP.Account;
+import OOP.Outer;
 import OOP.inheritance.Human;
 import OOP.inheritance.Person;
 
@@ -8,8 +9,7 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        Account.StaticInnerClass staticInnerClass = new Account.StaticInnerClass();
-        staticInnerClass.m();
+        Outer inner  = new Outer.Inner();
     }
 
 
