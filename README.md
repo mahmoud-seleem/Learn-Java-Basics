@@ -1,2 +1,2 @@
 # Learn-Java-Basics
-repo for learning java basics and it object oriented programming 
+repo for learning java basics and it's Object Oriented Programming 
