@@ -17,6 +17,12 @@ public class Outer {
             }
             int x ;
             public void p(){
+                int local = 0;
+                local += 10000;
+                class M{
+                    int x = 10;
+                }
+                System.out.println(new M().x);
 //                System.out.println(outerX);
                 System.out.println(this);
                 System.out.println(Outer.this);
