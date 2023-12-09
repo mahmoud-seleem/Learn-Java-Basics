@@ -11,7 +11,7 @@ public class HelloWorld {
     public static void main(String[] args) {
         Outer out = new Outer();
         Outer.Inner1 in1 = out.new Inner1();
-        Outer.Inner1.Inner2 in2 = in1.new Inner2();
+        Outer.Inner1.Inner2 in2 = in1.new Inner2(5);
         in2.p();
     }
 
