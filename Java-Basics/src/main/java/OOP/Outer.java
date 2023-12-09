@@ -18,9 +18,8 @@ public class Outer {
             int x ;
             public void p(){
                 int local = 0;
-                local += 10000;
                 class M{
-                    int x = 10;
+                    int x = local;
                 }
                 System.out.println(new M().x);
 //                System.out.println(outerX);
