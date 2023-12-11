@@ -11,7 +11,11 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        Generic<Person> p = new Generic<>(new Person());
+        Generic<Integer> p = new Generic<>(5);
+        System.out.println((Integer) p.gene + 10);
+        p.setGene(10);
+        System.out.println((Integer) p.gene + 10);
+
     }
 
 

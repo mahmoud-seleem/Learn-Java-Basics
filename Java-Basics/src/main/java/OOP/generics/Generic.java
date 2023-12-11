@@ -4,9 +4,12 @@ import OOP.inheritance.Human;
 import OOP.polymorphism.Playable;
 
 public class Generic<E> {
-    E gene ;
+    public E gene ;
 
-    public Generic(E s){
-        gene = s;
+    public Generic(E gene){
+        this.gene = gene;
+    }
+    public void setGene(E gene){
+        this.gene = gene;
     }
 }
