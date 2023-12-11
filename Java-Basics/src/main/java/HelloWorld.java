@@ -12,10 +12,9 @@ public class HelloWorld {
     }
     public static void main(String[] args) {
         Generic<Integer> p = new Generic<>(5);
-        System.out.println((Integer) p.gene + 10);
-        p.setGene(10);
-        System.out.println((Integer) p.gene + 10);
-
+        Generic pp = new Generic();
+        System.out.println(pp.gene);
+//        p.actualName(0.5);
     }
 
 
