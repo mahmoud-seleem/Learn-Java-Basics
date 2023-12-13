@@ -17,15 +17,16 @@ public class HelloWorld {
        print(Arrays.asList(1,2,3,4));
     }
 
-    public static <E> void print(List<E> list){
-        for (E element : list){
-            System.out.println(element.getClass().getName());
-        }
-    }
-    public static  void print(List<?> list){
+//    public static <E> void print1(List<E> list){
+//        for (E element : list){
+//            System.out.println(element.getClass().getName());
+//        }
+//    }
+    public static  List<?> print(List<?> list){
         for (Object element : list){
             System.out.println(element.getClass().getName());
         }
+        return list;
     }
 
 
