@@ -7,10 +7,11 @@ import java.util.List;
 
 public class Generic<E> {
     public E gene ;
+    public E[] a;
 
     public <S> Generic(S gene){
     }
-    public Generic(){}
+
     public <N> void actualName(N gene){
         System.out.println(gene);
     }

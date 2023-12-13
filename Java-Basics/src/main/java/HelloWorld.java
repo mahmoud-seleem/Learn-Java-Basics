@@ -32,6 +32,8 @@ public class HelloWorld {
        List<? super Number> ll = list1;
        List<? super Integer > list = ll;
        Generic.p(list);
+//       Generic<?> e = new Generic<>();
+//        System.out.println(e.gene);
     }
 
     public static <E> void print1(List<E> list){
