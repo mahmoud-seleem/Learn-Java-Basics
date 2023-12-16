@@ -1,5 +1,6 @@
 import OOP.Account;
 import OOP.Outer;
+import OOP.generics.Box;
 import OOP.generics.Generic;
 import OOP.inheritance.Human;
 import OOP.inheritance.Person;
@@ -14,37 +15,43 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-//       List<Integer> list0 = new ArrayList<>();
-//       list0.add(10);
-//       list0.add(5);
-       List<Number> list1 = new ArrayList<>();
-       list1.add(10);
-       list1.add(5.0);
-//       Generic.printList0(list0);
-//        System.out.println("------------------------");
-       Generic.printList0(list1);
-        System.out.println("------------------------");
-//       Generic.printList(list0);
-//        System.out.println("------------------------");
-       Generic.printList(list1);
-       print(list1);
-       print1(list1);
-       List<? super Number> ll = list1;
-       List<? super Integer > list = ll;
-       Generic.p(list);
-//       Generic<?> e = new Generic<>();
-//        System.out.println(e.gene);
+        Box box = new Box();
+        Box<Integer> integerBox = new Box<>();
+        box.setObject(10.0);
+        integerBox.setObject(10);
+        box = integerBox;
+        box.setObject(10.5);
+        System.out.println(integerBox.getObject());
+//        The warning shows that raw
+//        types bypass generic type
+//        checks, deferring the catch
+//        of unsafe code to runtime.
+//        Therefore, you should avoid using raw types.
     }
+    public static  <U extends Number> void  print(List<U> list){
+        Number n = list.get(0);
+        Number nn = 8.5;
+        list.add((U) nn);
+        for (U nnn : list){
+            System.out.println(nnn.intValue());
+        }
+    }
+    public static  void  print2(List<? super Number> list){
+        Number n = helper(list);
+        for (Object nnn : list){
+            System.out.println(nnn);
+        }
+    }
+    public static <T> Number helper(List<T> list){
+        list.add(list.get(0));
+        return (Number) list.get(0);
+    }
+
 
     public static <E> void print1(List<E> list){
         for (E element : list){
             System.out.println(element.getClass().getName());
         }
     }
-    public static  void  print(List<? extends Number> list){
-        Number n = list.get(0);
-        System.out.println(n);
-    }
-
 
 }
