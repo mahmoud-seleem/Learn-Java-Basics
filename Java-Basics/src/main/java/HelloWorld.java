@@ -1,4 +1,7 @@
+import OOP.generics.Animal;
 import OOP.generics.Box;
+import OOP.generics.Cat;
+import OOP.generics.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +11,13 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(10);
-        list.add(555);
-        print1(list);
+        List<? extends Integer> integers = new ArrayList<>();
+        List<? extends Number> numbers = new ArrayList<>();
+        List<?> objects  = new ArrayList<>();
+        List<Integer> integers1 = new ArrayList<>();
+        List<? super Number> numberSupers = new ArrayList<>();
+        List<? super Integer> supers = new ArrayList<>();
+//        objects = numbers;
 //        box = integerBox;
 //        box.setObject(10.5);
 //
@@ -24,19 +30,26 @@ public class HelloWorld {
     }
 
     public static void print(List<? extends Number> list){
-        list.add(10);
-        for (Number n : list){
-            System.out.println(n);
-        }
+      //list.add(10);
+//        for (Number n : list){
+//            System.out.println(n);
+        //}
+
     }
     public static <T extends  Number >void print1(List<T> list){
-        list.add((T) Double.valueOf(5.5));
-        // bad behavior as we added
-        // double value to int list
-        for (Number n : list){
-            System.out.println(n);
+//        list.add((T)Double.valueOf(5.5));
+//        // bad behavior as we added
+//        // double value to int list
+//        for (Number n : list){
+//            System.out.println(n);
+
+
+        }
+        public static void printArray(Animal[] animals){
+            animals[0] = new Cat();
+            for (Animal a : animals){
+                System.out.println(a.getClass().getSimpleName());
+            }
         }
     }
 
-
-}
