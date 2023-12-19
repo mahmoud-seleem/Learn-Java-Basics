@@ -1,4 +1,4 @@
 package OOP.generics;
 
-public class Animal {
+public class Animal extends Creature{
 }

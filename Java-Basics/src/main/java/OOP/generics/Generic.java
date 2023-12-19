@@ -7,27 +7,19 @@ import java.util.List;
 
 public class Generic<E> {
     public E gene ;
-    public E[] a;
+    public Generic(){
 
-    public <S> Generic(S gene){
     }
 
-    public <N> void actualName(N gene){
-        System.out.println(gene);
-    }
-    public static <C extends Number> void printList0(List<C> list){
-        for(C element : list){
-            System.out.println(element.getClass().getSimpleName() + (element.intValue() + 5));
-        }
+    public Generic(E gene) {
+        this.gene = gene;
     }
 
-    public  static void printList(List<? extends Number> list){
-        for(Number element : list){
-            System.out.println(element.getClass().getSimpleName() + (element.intValue() + 5));
-        }
+    public E getGene() {
+        return gene;
     }
 
-    public static void p(List<?> list){
-
+    public void setGene(E gene) {
+        this.gene = gene;
     }
 }
