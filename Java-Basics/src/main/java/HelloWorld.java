@@ -9,12 +9,9 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-//        List<Animal> creatures = new ArrayList<>();
-//        creatures.add(new Animal());
-//        creatures.get(0).age = 10;
-//        creatures.add(new Animal());
-//        creatures.get(1).age = 5;
-//        sort(creatures);
+        for (int x : new int[10]){
+            x = x + 1;
+        }
     }
     public static <T> void capture(List<T> list){
         list.add(list.get(0));
