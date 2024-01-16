@@ -9,10 +9,8 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        for (int x : new int[10]){
-            x = x + 1;
-        }
     }
+
     public static <T> void capture(List<T> list){
         list.add(list.get(0));
     }

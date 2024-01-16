@@ -1,6 +1,8 @@
 package OOP.generics;
 
-public class Being implements Comparable<Being>{
+import java.util.Comparator;
+
+public class Being implements Comparable<Being> {
     int size;
     @Override
     public int compareTo(Being o) {

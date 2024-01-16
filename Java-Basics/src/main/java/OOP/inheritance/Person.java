@@ -15,7 +15,9 @@ public class Person extends Human implements Closeable {
     static {
         System.out.println("init of person");
     }
-
+    public static void m(){
+        System.out.println("hello");
+    }
     @Override
     public final void close()  {
 
@@ -25,3 +27,4 @@ public class Person extends Human implements Closeable {
         System.out.println("play");
     }
 }
+
