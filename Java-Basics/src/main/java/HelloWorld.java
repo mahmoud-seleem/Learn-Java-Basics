@@ -1,4 +1,6 @@
+import OOP.enums.Lev;
 import OOP.enums.Level;
+import OOP.enums.Weak;
 import OOP.generics.*;
 
 import java.util.ArrayList;
@@ -11,8 +13,9 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-
+                Level.MEDIUM.print();
     }
+
 }
 
 
