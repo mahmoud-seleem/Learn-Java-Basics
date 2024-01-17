@@ -9,13 +9,16 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-    }
+        Box<Integer> box = new Box<>();
+        box.setElement(5);
+        int x = box.getElement();
+        Box b = box;
+        box = b;
 
-    public static <T> void capture(List<T> list){
-        list.add(list.get(0));
     }
-    public static <E extends Comparable<?>> void sort(List<E> list){
-
+    
+    public <C> void s(C[] cs){
+        System.out.println(cs.length);
     }
 }
 
