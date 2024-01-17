@@ -11,7 +11,7 @@ public class HelloWorld {
         System.out.println("initialization of HelloWorld is here ");
     }
     public static void main(String[] args) {
-        Level level = Level.HIGH;
+
     }
 }
 
