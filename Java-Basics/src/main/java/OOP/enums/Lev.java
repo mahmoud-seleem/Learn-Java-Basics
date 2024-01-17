@@ -29,5 +29,4 @@ public enum Lev  {
         return this.levelNumber;
     }
     public abstract void print();
-
 }
