@@ -2,6 +2,7 @@ import OOP.generics.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class HelloWorld {
@@ -16,7 +17,7 @@ public class HelloWorld {
         box = b;
 
     }
-    
+    public void ss(List<? extends Number & Comparator<Number>){}
     public <C> void s(C[] cs){
         System.out.println(cs.length);
     }
