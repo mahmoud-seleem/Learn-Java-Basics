@@ -13,12 +13,10 @@ public class Zero {
         catchTheException(10,0);
     }
     public static void catchTheException(int x , int y){
-        try {
+        try{
             div(x,y);
         }catch (Exception e){
-            throw new Exception("new exception thrown from the catch in catch method");
-        }finally {
-            throw new RuntimeException("new exception in the finally block");
+            throw new RuntimeException("new exception thrown from the catch in catch method",e);
         }
     }
     public static int div(int q1,int q2){
