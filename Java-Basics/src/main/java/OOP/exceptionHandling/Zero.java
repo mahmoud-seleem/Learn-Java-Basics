@@ -8,6 +8,8 @@ public class Zero {
             div(10,0);
         }catch (ArithmeticException e ){
             System.out.println(e.getClass());
+        }catch (Exception e ){
+            System.out.println(e.getMessage());
         }
     }
     public static int div(int q1,int q2){
