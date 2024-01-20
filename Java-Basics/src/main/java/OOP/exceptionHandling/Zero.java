@@ -14,9 +14,11 @@ public class Zero {
     }
     public static void catchTheException(int x , int y)throws Exception{
         int xx = 10;
-        try(AutoClosing a = new AutoClosing()) {
+        try{
             int xxx = 5;
-            div(x, y);
+            throw new AssertionError();
+        }catch (Error e){
+            System.out.println(e.getClass().getName());
         }
 //        catch (IndexOutOfBoundsException e) {
 //            System.out.println(xx);
