@@ -1,2 +1,8 @@
-package OOP.exceptionHandling;public class AutoClosing {
+package OOP.exceptionHandling;
+
+public class AutoClosing implements AutoCloseable{
+    @Override
+    public void close() throws Exception {
+        System.out.println("AutoClosing class is closing now");
+    }
 }

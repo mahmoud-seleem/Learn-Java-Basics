@@ -12,12 +12,15 @@ public class Zero {
 //        }
         catchTheException(10,0);
     }
-    public static void catchTheException(int x , int y){
-        try{
-            div(x,y);
-        }catch (Exception e){
-            throw new RuntimeException("new exception thrown from the catch in catch method",e);
+    public static void catchTheException(int x , int y)throws Exception{
+        try(AutoClosing a = new AutoClosing()) {
+            div(x, y);
         }
+//        }catch (IndexOutOfBoundsException e) {
+//            System.out.println("hi");
+//        }finally {
+//            System.out.println("hIiiii");
+//        }
     }
     public static int div(int q1,int q2){
         return q1/q2;
