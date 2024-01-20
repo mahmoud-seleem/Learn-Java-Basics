@@ -18,9 +18,9 @@ public class Zero {
             int xxx = 5;
             div(x, y);
         }
-        catch (IndexOutOfBoundsException e) {
-            System.out.println(xx);
-        }
+//        catch (IndexOutOfBoundsException e) {
+//            System.out.println(xx);
+//        }
         //finally {
 //            System.out.println("hIiiii");
 //        }
