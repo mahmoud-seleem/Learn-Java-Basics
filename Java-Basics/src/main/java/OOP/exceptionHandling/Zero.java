@@ -13,12 +13,15 @@ public class Zero {
         catchTheException(10,0);
     }
     public static void catchTheException(int x , int y)throws Exception{
+        int xx = 10;
         try(AutoClosing a = new AutoClosing()) {
+            int xxx = 5;
             div(x, y);
         }
-//        }catch (IndexOutOfBoundsException e) {
-//            System.out.println("hi");
-//        }finally {
+        catch (IndexOutOfBoundsException e) {
+            System.out.println(xx);
+        }
+        //finally {
 //            System.out.println("hIiiii");
 //        }
     }
