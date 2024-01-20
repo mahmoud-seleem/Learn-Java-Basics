@@ -12,21 +12,20 @@ public class Zero {
 //        }
         catchTheException(10,0);
     }
-    public static void catchTheException(int x , int y)throws Exception{
+    public static void  catchTheException(int x , int y)throws Exception{
         int xx = 10;
         try{
             int xxx = 5;
-            throw new AssertionError();
-        }catch (Error e){
-            System.out.println(e.getClass().getName());
+            throw new Exception();
+        }catch (Exception e){
+            System.out.println("haha");
         }
-//        catch (IndexOutOfBoundsException e) {
-//            System.out.println(xx);
-//        }
-        //finally {
-//            System.out.println("hIiiii");
-//        }
+        finally {
+            System.out.println("hiIIIIIIIIIii");
+        }
     }
+
+
     public static int div(int q1,int q2){
         return q1/q2;
     }
