@@ -1,21 +1,20 @@
-import OOP.enums.Lev;
-import OOP.enums.Level;
-import OOP.enums.Weak;
-import OOP.generics.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-
 public class HelloWorld {
     static {
-        System.out.println("initialization of HelloWorld is here ");
-    }
-    public static void main(String[] args) {
-                Level.MEDIUM.print();
+        System.err.println("initialization of HelloWorld is here ");
     }
 
+    public static void main(String[] args) {
+        for (int i = 32; i < 127; i++) {
+            System.out.write(i);
+// break line after every eight characters.
+            if (i % 8 == 7)
+                System.out.write('\n');
+            else
+                System.out.write('\t');
+        }
+        System.out.write('\n');
+    }
 }
+
 
 
