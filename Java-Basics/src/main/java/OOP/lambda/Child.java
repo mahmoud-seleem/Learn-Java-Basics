@@ -5,6 +5,7 @@ public class Child extends Parent{
     public void print(){
         System.out.println("child");
     }
+
     public void l(){
         Foo foo = () -> {
           this.print();
