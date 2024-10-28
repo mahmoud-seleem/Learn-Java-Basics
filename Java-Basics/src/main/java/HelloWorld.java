@@ -3,29 +3,20 @@ import java.util.Scanner;
 
 public class HelloWorld {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int counter = 10;
-        final int CONST = 5;
-        int x;
-        while (true) {
-            System.out.println("Enter number");
-            x = input.nextInt();
-            switch (x) {
-                case 1:
-                    System.out.println(1);
-                    break;
-                case CONST:
-                    System.out.println(CONST);
-                    break;
-                default:
-                    System.out.println("Default");
-                    break;
-                case 2:
-                    System.out.println(2);
-                    break;
-            }
+        printArray2(1,2,3);
+    }
+    public static void printArray2(int... elements){
+        for(int x : elements){
+            System.out.println(x);
         }
     }
+    public static void printArray(int[] elements){
+        for(int x : elements){
+            System.out.println(x);
+        }
+    }
+
 }
 
