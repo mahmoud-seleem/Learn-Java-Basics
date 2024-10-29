@@ -7,7 +7,7 @@ import java.io.Closeable;
 import java.io.IOException;
 
 public class Person extends Human implements Closeable {
-
+    private int xxxx = 1000;
     public Person(){
 
     }

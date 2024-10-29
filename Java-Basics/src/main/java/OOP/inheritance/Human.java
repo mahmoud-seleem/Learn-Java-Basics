@@ -3,7 +3,7 @@ package OOP.inheritance;
 import OOP.polymorphism.Playable;
 
 public class Human implements Playable {
-
+    private int xxxx = 10;
     static {
         System.out.println("init of Human");
     }
