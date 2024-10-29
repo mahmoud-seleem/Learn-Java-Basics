@@ -4,6 +4,7 @@ import OOP.polymorphism.Playable;
 
 public class Human implements Playable {
     private int xxxx = 10;
+    private Person p;
     static {
         System.out.println("init of Human");
     }
@@ -26,7 +27,7 @@ public class Human implements Playable {
         this.name = name;
     }
     private void pri(){
-
+        System.out.println();
     }
      @Override
      public void play(){

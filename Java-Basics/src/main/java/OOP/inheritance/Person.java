@@ -7,7 +7,8 @@ import java.io.Closeable;
 import java.io.IOException;
 
 public class Person extends Human implements Closeable {
-    private int xxxx = 1000;
+    private int xx = 1000;
+    private Human human;
     public Person(){
 
     }
@@ -23,7 +24,8 @@ public class Person extends Human implements Closeable {
 
     }
     @Override
-    public  void play(){
+    public  void play()
+    {
         System.out.println("play");
     }
 }
