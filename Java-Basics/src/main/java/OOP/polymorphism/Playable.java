@@ -5,7 +5,7 @@ public interface Playable {
      default void mm(){
           plll();
      };
-      static void mmmm(){
+          static void mmmm(){
 
      }
      private void plll(){
