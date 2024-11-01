@@ -11,11 +11,9 @@ public class stream {
         System.out.print("Original values: ");
         IntStream
                 .of(values)
-                .forEach(value -> System.out.printf("%d ", value));
-        IntStream.
-                of(values)
-                .forEach(System.out::println);
-
-    //System.out.println();
+                .forEach(value -> System.out.println(value));
+        int sum = IntStream.
+                range(1,10).reduce(0,(x, y) -> x+y);
+        System.out.println(sum);
     }
 }
