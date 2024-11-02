@@ -17,9 +17,8 @@ public class Server {
                 System.out.println("Client connected");
 //                PrintWriter writer = new PrintWriter(outputStream, true);
 //                writer.println("Hello from Java Server!");
-                outputStream.write(5);
-                outputStream.write(6);
-                //outputStream.flush();
+                outputStream.write("Hello from my Server".getBytes());
+                outputStream.flush();
 //                Thread.sleep(5000l);
                 connectionSocket.close();
             }
