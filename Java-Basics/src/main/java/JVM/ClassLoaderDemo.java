@@ -2,12 +2,16 @@ package JVM;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+
+import aj.org.objectweb.asm.*;
 
 public class ClassLoaderDemo extends ClassLoader{
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws ClassNotFoundException , IOException{
+        ClassLoaderDemo demo = new ClassLoaderDemo("D:/backend-development/JAVA/Learn-Java-Basics/Java-Basics/target");
+        demo.loadClass("test.Driver");  
     }
     
     private String basePath;
