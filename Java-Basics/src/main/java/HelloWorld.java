@@ -14,23 +14,8 @@ import java.util.Scanner;
 
 public class HelloWorld {
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-//        ObjectOutputStream outputStream =
-//                new ObjectOutputStream(
-//                        Files.newOutputStream(
-//                                Paths.get("D:\\backend-development\\JAVA\\test\\test.ser")));
+    public static void main(String[] args) {
 
-        ObjectInputStream inputStream =
-                new ObjectInputStream(
-                        Files.newInputStream(
-                                Paths.get("D:\\backend-development\\JAVA\\test\\test.ser")));
-
-//        Acc acc = new Acc();
-//        outputStream.writeObject(acc);
-    Acc acc =(Acc)inputStream.readObject();
-        System.out.println("age : " +acc.getAge());
-        System.out.println("name : " +acc.getName());
-        System.out.println("salary : " +acc.getSalary());
     }
 }
 
