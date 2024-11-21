@@ -2,7 +2,7 @@ import http.server
 import socketserver
 
 # Define the directory containing the .class files
-CLASS_FILES_DIR = "D:/backend-development/JAVA/Learn-Java-Basics/Java-Basics/target/test"
+CLASS_FILES_DIR = "D:/backend-development/JAVA/Learn-Java-Basics/Java-Basics/target/classes/test"
 PORT = 8000
 
 # Create a handler to serve files from the CLASS_FILES_DIR

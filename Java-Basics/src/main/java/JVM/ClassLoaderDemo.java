@@ -11,9 +11,9 @@ import aj.org.objectweb.asm.*;
 public class ClassLoaderDemo extends ClassLoader{
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        String serverUrl = "http://localhost:8000/test";
+        String serverUrl = "http://localhost:8000/classes/test";
         ClassLoaderDemo demo = new ClassLoaderDemo(serverUrl);
-        Class<?> clzz = demo.loadClass("Driver");
+        Class<?> clzz = demo.loadClass("Foo");
         System.out.println(clzz);
         Method[] methods =  clzz.getDeclaredMethods();
         for (Method method : methods) {
