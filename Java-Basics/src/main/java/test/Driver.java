@@ -1,4 +1,7 @@
 package test;
-public class Driver{
 
+public class Driver {
+    static void printSecret(){
+        System.out.println("secret");
+    }
 }

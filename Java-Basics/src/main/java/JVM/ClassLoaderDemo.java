@@ -1,32 +1,44 @@
 package JVM;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import aj.org.objectweb.asm.*;
 
 public class ClassLoaderDemo extends ClassLoader{
 
-    public static void main(String[] args) throws ClassNotFoundException , IOException{
-        ClassLoaderDemo demo = new ClassLoaderDemo("D:/backend-development/JAVA/Learn-Java-Basics/Java-Basics/target");
-        demo.loadClass("test.Driver");  
+    public static void main(String[] args) throws ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        String serverUrl = "http://localhost:8000/test";
+        ClassLoaderDemo demo = new ClassLoaderDemo(serverUrl);
+        Class<?> clzz = demo.loadClass("Driver");
+        System.out.println(clzz);
+        Method[] methods =  clzz.getDeclaredMethods();
+        for (Method method : methods) {
+            System.out.println(method);
+        }
     }
     
     private String basePath;
-
-    public ClassLoaderDemo(String basePath){
-        this.basePath = basePath;
+    private String baseUrl;
+//
+//    public ClassLoaderDemo(String basePath){
+//        this.basePath = basePath;
+//    }
+    public ClassLoaderDemo(String baseUrl){
+        this.baseUrl = baseUrl;
     }
+
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         try {
-            String filePath = basePath + File.separator + name.replace('.', File.separatorChar) + ".class";
-
+//            String filePath = basePath + File.separator + name.replace('.', File.separatorChar) + ".class";
+            String urlPath = baseUrl + "/" + name.replace('.', '/') + ".class";
             // Read the class bytecode
-            byte[] classBytes = downloadClassBytes(filePath);
+            byte[] classBytes = downloadClassBytesFromInternet(urlPath);
 
             // Define the class using the downloaded bytecode
             return defineClass(name, classBytes, 0, classBytes.length);
@@ -45,6 +57,24 @@ public class ClassLoaderDemo extends ClassLoader{
                 return buffer;
             }
         }   
+    }
+    private byte[] downloadClassBytesFromInternet(String urlPath) throws IOException {
+        URL url = new URL(urlPath);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+
+        try (InputStream inputStream = connection.getInputStream();
+             ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            return outputStream.toByteArray();
+        } finally {
+            connection.disconnect();
+        }
     }
 }
 
