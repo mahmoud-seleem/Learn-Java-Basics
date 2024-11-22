@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+premain-class: JavaAgent
+Created-By: 21.0.5 (Oracle Corporation)
+
