@@ -8,6 +8,6 @@ public class MyClass extends MyClassParent {
         super(name);
     }
     static final int x = 10;
-
+    public void parentPrint(){}
     
 }
