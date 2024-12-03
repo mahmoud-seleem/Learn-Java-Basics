@@ -3,12 +3,15 @@ package JVM;
 import java.io.EOFException;
 
 public class Test {
-    public static void main(String[] args){
-      
+    public static void main(String[] args){  
+        
     }
 
-    void print(){
-        System.out.println("");
+    static void print(){
+        System.out.println("static");
+    }
+    void printInstance(){
+        System.out.println("instance");
     }
 }
 
