@@ -1,23 +1,22 @@
-import OOP.polymorphism.Closable;
+import OOP.inheritance.Empty;
 
-public class HelloWorld implements Closable{
+public class HelloWorld extends Empty { 
+    public int x;
     public static String name = "hello";
     public static void main(String[] args) {
-        int x = 0;
-        outer:
-        while (true) {
-            inner:
-            System.out.println("outer");
-            while (true) {
-                if (x == 1){
-                    break ;
-                }                     
-            }
-        }
+        HelloWorld h = new HelloWorld();
+        h.x = 5;
+        System.out.println(h.x);
     }  
-
-    public void close(){
-
+    public void printx(){
+        System.out.println(this.x);
+        System.out.println(super.x);
     }
+
+    @Override
+    public void m(){
+        
+    }
+
 }
 
