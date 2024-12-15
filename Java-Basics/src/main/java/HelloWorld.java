@@ -1,22 +1,24 @@
 import OOP.inheritance.Empty;
 
-public class HelloWorld extends Empty { 
-    public int x;
+public class HelloWorld  extends Empty{ 
+    public HelloWorld(){
+        System.out.println(55);
+    }
     public static String name = "hello";
+    {
+        System.out.println("hi");
+    }
+    public int x = 10;
     public static void main(String[] args) {
         HelloWorld h = new HelloWorld();
-        h.x = 5;
-        System.out.println(h.x);
+        h.printx(h);
     }  
-    public void printx(){
-        System.out.println(this.x);
-        System.out.println(super.x);
+    public void printx(Empty e){
+        System.out.println(e.x);
+
     }
 
-    @Override
-    public void m(){
-        
-    }
+
 
 }
 
