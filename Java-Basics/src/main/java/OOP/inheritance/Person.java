@@ -23,10 +23,5 @@ public class Person extends Human implements Closeable {
     public final void close()  {
 
     }
-    @Override
-    public  void play()
-    {
-        System.out.println("play");
-    }
 }
 

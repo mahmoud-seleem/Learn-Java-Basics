@@ -2,7 +2,7 @@ package OOP.inheritance;
 
 import OOP.polymorphism.Playable;
 
-public class Human implements Playable {
+public class Human  {
     private int xxxx = 10;
     private Person p;
     static {
@@ -29,8 +29,5 @@ public class Human implements Playable {
     private void pri(){
         System.out.println();
     }
-     @Override
-     public void play(){
 
-    }
 }
