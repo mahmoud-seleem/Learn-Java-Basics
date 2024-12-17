@@ -1,6 +1,10 @@
-//package OOP;
-//
-//public enum Day extends Enum<Day> {
-//    SUNDAY,MONDAY;
-//    private byte index;
-//}
+package OOP;
+
+
+public class Day extends Account{
+
+    public static void main(String[] args) {
+       
+    }
+
+}

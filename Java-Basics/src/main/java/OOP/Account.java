@@ -1,50 +1,38 @@
 package OOP;
 
-import javax.swing.*;
-import java.util.Random;
-
 public class Account {
+    static{
+        System.out.println("init of the outer");
+    }
+    public static int x;
+    public static int shared = 10;
+    public static void main(String[] args) {
+        System.out.println(Inner.x);
+        Account a = new Account();
+        Account.Inner inner = a.new Inner();
+        //        inner.printInner();
 
-    public Account(){
+    }
+    public void instanceMethod(){
+        // Inner inner = new Inner();
+        System.out.println(Account.this);
+    }
 
-        try{
-            System.out.println("hi");
-            throw new Exception("exception");
-        }catch (Exception e ){
-            System.out.println(e.getMessage());
+    public class Inner{
+        private static int x = (int)Math.random() + 1;
+        public static int shared = 55;
+        static{
+            System.out.println("init of the static inner");
         }
-    }
-    public String name;
-    private static  int X =5;
-    static {
-        System.out.println("initialization of Account");
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return this.name;
-    }
-    public static void sss(){
+
+
+        public void printInner(){
+            System.out.println(Account.this);
+            System.out.println(this);
+        }
+        
 
     }
-    static void usingStatic(){
-        StaticInnerClass s = new StaticInnerClass();
-        s.m();
-        s.pr();
-    }
 
-    public static class StaticInnerClass {
-        int s ;
-        static {
-            System.out.println("initialization of static inner class");
-        }
-        public void m(){
-            System.out.println(X);
-            sss();
-        }
-        private  void pr(){
 
-        }
-    }
 }
