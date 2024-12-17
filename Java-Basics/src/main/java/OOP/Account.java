@@ -7,15 +7,33 @@ public class Account {
     public static int x;
     public static int shared = 10;
     public static void main(String[] args) {
-        System.out.println(Inner.x);
-        Account a = new Account();
-        Account.Inner inner = a.new Inner();
-        //        inner.printInner();
+        Account aaaaa = new Account();
+        aaaaa.instanceMethod();
+    }
+    public void mmmm(){
 
     }
     public void instanceMethod(){
-        // Inner inner = new Inner();
-        System.out.println(Account.this);
+        Account a = new Account(){
+            public void mmmm() {
+                System.out.println(Account.this);
+                System.out.println("mmmm method from the account new class");
+            }
+        };
+        a.mmmm();
+        Account aa = new Account();
+        aa.mmmm();
+    }
+    public static void staticinstanceMethod(){
+        Account a = new Account(){
+            public void mmmm() {
+                System.out.println();
+                System.out.println("mmmm method from the account new class");
+            }
+        };
+        a.mmmm();
+        Account aa = new Account();
+        aa.mmmm();
     }
 
     public class Inner{
