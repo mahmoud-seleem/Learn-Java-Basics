@@ -1,16 +1,21 @@
 package OOP.generics;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Main<E extends Shape> {
-
-    public E[] elements;
-    public Main(){
-        elements =(E[]) new Shape[10];
+public class Main {
+    private Object object;
+    public void setObject(Object object){
+        this.object = object;
     }
+    public Object getObject(){
+        return this.object;
+    }
+
     public static void main(String[] args) {
-    //  Main<String> ms = new Main<>();
-    //  ms.elements[0] = "10";
+            Main m = new Main();
+            m.setObject("hi");
+            int x = (int) m.getObject();
     }
 }
+
