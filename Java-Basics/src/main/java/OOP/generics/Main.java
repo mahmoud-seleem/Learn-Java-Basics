@@ -19,7 +19,13 @@ public class Main<T> {
     }
 
     public static void main(String[] args) {
-        printList(new ArrayList<String>());
+        List<Integer> list = new ArrayList();
+        list.add(10);
+        List list2 = list;
+        list2.add("args");
+        for(Integer o : list){
+            System.out.println(o);
+        }
     }
     public static <E> void printList(List<E> list){
         for (E item : list){
