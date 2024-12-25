@@ -1,9 +1,10 @@
 package OOP.generics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Main<T> {
+public class Main<T extends Exception> {
     private T object;
 
     public void setObject(T object) {
@@ -11,26 +12,38 @@ public class Main<T> {
     }
 
     public T getObject() {
+        try {
+            print(object);   
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
         return this.object;
     }
 
-    public void print(T item) {
+    public void print(T item) throws T {
         System.out.println(item);
     }
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList();
-        list.add(10);
-        List list2 = list;
-        list2.add("args");
-        for(Integer o : list){
-            System.out.println(o);
-        }
+        genricPrintList(new ArrayList<String>());
     }
-    public static <E> void printList(List<E> list){
-        for (E item : list){
+
+    public static void printList(List<?> list) {
+        for (Object item : list) {
             System.out.println(item);
         }
+        // list.add(list.get(0));
+        
+
+    }
+
+    public static <E> void genricPrintList(List<E> list) {
+        for (E item : list) {
+            System.out.println(item);
+        }
+    } 
+    public static <E extends Number> void swap(List<E> list, E item){
+        list.set(0, item);
     }
 }
 
