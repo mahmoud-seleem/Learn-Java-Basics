@@ -12,5 +12,5 @@ import java.lang.annotation.Annotation;
 @Target({ElementType.METHOD})
 public @interface Demo {
 
-    int id();
+    int id() default 10;
 }
