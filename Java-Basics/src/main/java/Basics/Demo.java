@@ -1,17 +1,12 @@
 package Basics;
 
+import java.lang.invoke.StringConcatFactory;
 public class Demo {
     public static void main(String[] args) {
-        int x = 0;
-        switch (x){
-            case 7:
-            System.err.println("sfasd");
-            case 8:
-            System.out.println("");
-            break;
-            default:
-            System.out.println("default");
-            break;
-        }
+        short x = print((short)5000001);
+    }
+    public static short print(short x ){
+        System.out.println(x);
+        return x;
     }
 }
