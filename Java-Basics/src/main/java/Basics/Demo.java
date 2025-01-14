@@ -8,5 +8,6 @@ public class Demo {
     }
     public static void print(int ...x ){
         System.out.println(x.length);
+        int[] xx[] = new int[10][5];
     }
 }
