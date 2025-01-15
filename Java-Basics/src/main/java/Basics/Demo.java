@@ -4,9 +4,7 @@ import java.lang.invoke.StringConcatFactory;
 
 public class Demo {
     public static void main(String[] args) {
-        System.out.println("AB" == "A" + "B");
-        String s = "B";
-        System.out.println("AB" == "A" + s);
+      System.out.println("x" + 3);
     }
 
     public static void print(int... x) {
