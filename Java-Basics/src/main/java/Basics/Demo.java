@@ -12,11 +12,11 @@ import okhttp3.Response;
 
 public class Demo {
     private static final String API_URL = "https://api.pushbullet.com/v2/pushes";
-    private static final String ACCESS_TOKEN = "o.mpnOQPzwiNgMIoomPeMMG99rFdnOm3Vg";
+    private static final String ACCESS_TOKEN = "access token of the pushbullet website ";
 
     public static void main(String[] args) {
         // String BASE_URL = "https://api.notion.com/v1/";
-        // String TOKEN = "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";
+        // String TOKEN = "token of the user from notion "
         // Example: Fetch a page
         // String pageId = "178da782c9e5806a8917cd45db2fc3c6";
         String json = """
