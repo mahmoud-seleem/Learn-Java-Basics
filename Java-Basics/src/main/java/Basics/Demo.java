@@ -12,13 +12,14 @@ import okhttp3.Response;
 
 public class Demo {
     private static final String API_URL = "https://api.pushbullet.com/v2/pushes";
-    private static final String ACCESS_TOKEN = "access token of the pushbullet website ";
+    private static final String ACCESS_TOKEN = "o.6rpNQM4TMIbpnEXg3YtiVTpkayqD3Hs4";
 
     public static void main(String[] args) {
-        // String BASE_URL = "https://api.notion.com/v1/";
-        // String TOKEN = "token of the user from notion "
+
+        String BASE_URL = "https://api.notion.com/v1";
+        String TOKEN = "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";
         // Example: Fetch a page
-        // String pageId = "178da782c9e5806a8917cd45db2fc3c6";
+        String pageId = "178da782c9e580219820de155cbef5f2";
         String json = """
                     {
                       "type": "note",
@@ -26,7 +27,8 @@ public class Demo {
                       "body": "This is a test notification sent via Java!"
                     }
                 """;
-        RequestBody body = RequestBody.create(json, MediaType.get("application/json"));
+        
+                RequestBody body = RequestBody.create(json, MediaType.get("application/json"));
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(API_URL)
@@ -35,23 +37,22 @@ public class Demo {
                 .addHeader("Content-Type", "application/json")
                 .build();
 
+        Request getNotionNoteRequest = new Request.Builder()
+                .url(BASE_URL + "/blocks/" + pageId + "/children")
+                .addHeader("Authorization", "Bearer " + TOKEN)
+                .addHeader("Notion-Version", "2022-06-28")
+                .build();
         try {
-            for (int i = 0; i < 10; i++) {
-                Thread.sleep(2000);
-                Response response = client.newCall(request).execute();
+                Response response = client.newCall(getNotionNoteRequest).execute();
                 if (response.isSuccessful()) {
-
-                    System.out.println(response.body().string());
+                                    
                 } else {
                     System.err.println("Request failed: " + response.code());
                 }
-            }
+            
         } catch (IOException exception) {
             System.out.println(exception);
-        }catch(InterruptedException exception){
-            System.out.println(exception);
         }
-
     }
 
 }
