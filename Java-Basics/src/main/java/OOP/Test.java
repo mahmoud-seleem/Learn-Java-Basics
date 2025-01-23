@@ -3,8 +3,9 @@ package OOP;
 public class Test {
 
     public static void main(String[] args) {
-    Conc anon = new Conc(44){
-        
+        InnerTest test = new InnerTest("fasdfasf");
+        Conc anon = new Conc(44){
+
         int x= 55;
         int z = 1000;
         @Override
@@ -14,7 +15,7 @@ public class Test {
     };
     System.out.println(anon.x);
     System.out.println(anon.y);
-    System.out.println(anon.z);
+  
     anon.im();
     }
 
@@ -34,3 +35,14 @@ class Conc {
     static void sm(){}
     void im(){}
 }
+interface Outer{
+    default void def(){
+        class Local{
+
+        }
+    }
+}
+record InnerTest(String name) {
+    
+}
+
