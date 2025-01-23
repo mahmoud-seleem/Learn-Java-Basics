@@ -6,6 +6,7 @@ public class Day extends Praent implements Playable{
     public void m(){
         System.out.println(y);
         System.out.println(super.y);
+    
             
     }
     private  void pr(){
@@ -39,7 +40,9 @@ interface Playable extends PlayableParent2{
 //     }
 // }
 interface PlayableParent2{
+    public static int c = 10 ;
     int print(int x);
+    public static void st(){}
     public default void printing(){
         pr();
     } 
