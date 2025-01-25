@@ -8,7 +8,8 @@ public class Zero extends AutoClosing {
     public static void main(String[] args) throws Exception {
         try (AutoClosing a = new AutoClosing()) {
             throw new ArithmeticException();
-        } catch ( ArithmeticException  e) {
+        } catch ( ArithmeticException | IOException e) {
+            // e = new ArithmeticException("hello");
             System.out.println(e.getMessage());
             Predicate xxxx = (z) -> {
                 if (z != null) return true ;
