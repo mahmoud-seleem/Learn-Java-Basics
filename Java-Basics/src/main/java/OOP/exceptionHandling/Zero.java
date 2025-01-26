@@ -6,7 +6,10 @@ import java.util.function.Predicate;
 
 public class Zero extends AutoClosing {
     public static void main(String[] args) throws Exception {
-        try (AutoClosing a = new AutoClosing()) {
+        
+        AutoClosing a = new AutoClosing();
+        AutoClosing b = new AutoClosing();
+        try (a;b) {
             throw new ArithmeticException();
         } catch ( ArithmeticException | IOException e) {
             // e = new ArithmeticException("hello");
