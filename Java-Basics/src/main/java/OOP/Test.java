@@ -1,6 +1,6 @@
 package OOP;
 
-public class Test {
+public class Test implements Outer{
 
     public static void main(String[] args) {
         InnerTest test = new InnerTest("fasdfasf");
@@ -36,6 +36,7 @@ class Conc {
     void im(){}
 }
 interface Outer{
+    int z = 10;
     default void def(){
         class Local{
 
