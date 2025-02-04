@@ -22,4 +22,12 @@ public class Generic<E> {
     public void setGene(E gene) {
         this.gene = gene;
     }
+    public static  <T> void print(T type){
+        Generic<T> g = new Generic<>();
+        g.setGene(type);
+        System.out.println(g.getGene());
+    }
+    public static void main(String[] args) {
+        Generic.print("string");
+    }
 }
