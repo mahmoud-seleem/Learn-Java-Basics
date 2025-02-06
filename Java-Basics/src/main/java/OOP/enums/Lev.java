@@ -19,7 +19,7 @@ public enum Lev  {
     };
 
     private int levelNumber;
-    Lev(int levelNumber){
+    private Lev(int levelNumber){
         this.levelNumber = levelNumber;
     }
     public void setLevelNumber(int levelNumber){
@@ -29,4 +29,22 @@ public enum Lev  {
         return this.levelNumber;
     }
     public abstract void print();
+}
+enum S implements F{
+    S{
+        @Override
+        public void p(){}
+     },V{
+        public void p(){}
+     },M{
+        public void p(){}
+     }
+}
+interface F{
+    void p();
+}
+class MMM{
+    public static void main(String[] args) {
+   
+    }
 }
