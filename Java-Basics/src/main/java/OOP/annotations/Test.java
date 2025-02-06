@@ -1,14 +1,19 @@
+
 package OOP.annotations;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
-import test.demo;
+
 
 public class Test {
 
+    /**
+     * 
+     * Documentation 
+     */
     @Demo(id = 10)
-    void testMethod() {
+    public void testMethod() {
         System.out.println("hi from test method");
 
     }
